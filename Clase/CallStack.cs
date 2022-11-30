@@ -19,6 +19,7 @@ namespace ManejoErrores.Clase {
 
     internal class ClaseC {
         public static void procesarC() {
+            throw new NotImplementedException("Ha ocurrido un error");
         }
     }
 }

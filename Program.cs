@@ -33,4 +33,15 @@ void procesar(int a, string nombre) {
 }
 
 /* Ventana Call Stack */
-ClaseA.procesarA();
+try {
+    Console.WriteLine("Antes del error");
+    ClaseA.procesarA();
+    Console.WriteLine("Después del error");
+} catch (Exception ex) {
+    Console.WriteLine("Ha ocurrido una excepción que no se ha contemplado");
+} finally {
+    Console.WriteLine("Este es el bloque del finally");
+}
+
+Console.WriteLine("Fin del programa");
+
