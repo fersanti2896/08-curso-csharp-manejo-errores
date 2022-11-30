@@ -11,3 +11,22 @@ Trace.Listeners.Add(msgConsola);
 Trace.Listeners.Add(msgPersonalizado);
 
 Debug.WriteLine("Mensaje de debug");
+
+sumar(4, 2);
+
+int sumar(int a, int b) { 
+    int c = a + b;
+    c++;
+    return c;
+}
+
+procesar(25, "Fer Santi");
+
+/* Valores de Variables Locales */
+void procesar(int a, string nombre) {
+    var tupla = (a, nombre);
+    a = 3;
+    int b = a + 23;
+    b -= 5;
+    int[] num = { 1, 2, 3 };
+}
