@@ -45,3 +45,10 @@ try {
 
 Console.WriteLine("Fin del programa");
 
+
+/* Excepciones Personalizadas */
+try {
+    throw new ExceptionPersonalizada("Mensaje nuevo de excepción");
+} catch (ExceptionPersonalizada) {
+    Console.WriteLine("Yo puedo manejar nuestra excepción");
+}
