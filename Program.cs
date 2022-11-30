@@ -1,5 +1,6 @@
 ﻿
 
+using ManejoErrores.Clase;
 using ManejoErrores.Debug;
 using System.Diagnostics;
 
@@ -30,3 +31,6 @@ void procesar(int a, string nombre) {
     b -= 5;
     int[] num = { 1, 2, 3 };
 }
+
+/* Ventana Call Stack */
+ClaseA.procesarA();
