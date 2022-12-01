@@ -46,9 +46,15 @@ try {
 Console.WriteLine("Fin del programa");
 
 
-/* Excepciones Personalizadas */
+/* Excepciones Personalizadas - Filtros de Excepciones */
 try {
-    throw new ExceptionPersonalizada("Mensaje nuevo de excepción");
-} catch (ExceptionPersonalizada) {
-    Console.WriteLine("Yo puedo manejar nuestra excepción");
+    throw new ExceptionPersonalizada(TipoError.ErrorNoEncontrado, "Mensaje nuevo de excepción");
+} catch (ExceptionPersonalizada ex) when (ex.TipoError == TipoError.ErrorCliente) {
+    Console.WriteLine("Error del Cliente");
+} catch (ExceptionPersonalizada ex) when (ex.TipoError == TipoError.ErrorServidor) {
+    Console.WriteLine("Error del Servidor");
+} catch (ExceptionPersonalizada ex) when (ex.TipoError == TipoError.ErrorNoEncontrado) {
+    Console.WriteLine("Recurso no encontrado");
 }
+
+Console.WriteLine("Fin del programa");

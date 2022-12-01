@@ -6,12 +6,20 @@ using System.Threading.Tasks;
 
 namespace ManejoErrores.Clase {
     internal class ExceptionPersonalizada : Exception {
-        public ExceptionPersonalizada(): base("Esta es una excepción personalizada") {
-
+        public ExceptionPersonalizada(TipoError tipoError): base("Esta es una excepción personalizada") {
+            TipoError = tipoError;
         }
 
-        public ExceptionPersonalizada(string? msg): base(msg) {
-
+        public ExceptionPersonalizada(TipoError tipoError, string? msg): base(msg) {
+            TipoError = tipoError;
         }
+
+        public TipoError TipoError { get; }
+    }
+
+    internal enum TipoError { 
+        ErrorCliente,
+        ErrorServidor,
+        ErrorNoEncontrado
     }
 }
