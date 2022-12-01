@@ -19,7 +19,12 @@ namespace ManejoErrores.Clase {
 
     internal class ClaseC {
         public static void procesarC() {
-            throw new NotImplementedException("Ha ocurrido un error");
+            try {
+                throw new FileNotFoundException("El archivo no ha sido encontrado");
+            } catch (FileNotFoundException ex) {
+                Console.WriteLine("Procesando la excepción");
+                throw;
+            }
         }
     }
 }

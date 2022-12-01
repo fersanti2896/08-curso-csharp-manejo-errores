@@ -58,3 +58,10 @@ try {
 }
 
 Console.WriteLine("Fin del programa");
+
+/* Relanzando Excepciones */
+try {
+    ClaseA.procesarA();
+} catch (Exception) {
+    Console.WriteLine("He atrapado la excepción");
+}
